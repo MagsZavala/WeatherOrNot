@@ -1,0 +1,102 @@
+/* Use Google Fonts for cute fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&family=Handlee&display=swap');
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #fffbe0; /* Light yellow background */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff7a5; /* Lighter yellow background for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Handlee', cursive;
+    font-size: 36px;
+    color: black; /* Bright yellow for the header */
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: black; /* A shade of yellow */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 2px solid #ffd700; /* A shade of yellow */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcd00; /* Bright yellow background */
+    color: black;
+    font-family: 'Handlee', cursive;
+}
+
+button:hover {
+    background-color: #ffb700; /* A shade of yellow for hover effect */
+}
+
+.cities {
+    margin-bottom: 20px;
+}
+
+.city-btn {
+    background-color: #ffeb75; /* Lighter shade of yellow */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Handlee', cursive;
+}
+
+.city-btn:hover {
+    background-color: #ffcd00; /* Bright yellow for hover effect */
+    color: white;
+}
+
+#weather-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff9f00; /* Darker shade of yellow */
+}
+
+.weather, .forecast {
+    margin-top: 20px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+.day {
+    border: 2px solid #ffcd00; /* Bright yellow border */
+    padding: 10px;
+    width: 150px;
+    text-align: left;
+    border-radius: 10px;
+    background-color: #fff9cc; /* Very light yellow background */
+}
