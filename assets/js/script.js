@@ -13,22 +13,41 @@ document.querySelectorAll('.city-btn').forEach(button => {
 });
 
 function getWeatherData(city) {
-    const geocodeUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+    const geocodeUrl = `api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`;
 
     fetch(geocodeUrl)
-        .then(response => response.json())
-        .then(data => {
-            const lat = data.coord.lat;
-            const lon = data.coord.lon;
-            const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
-
-            return fetch(weatherUrl);
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
         })
-        .then(response => response.json())
+        .then(data => {
+            if (data.coord) {
+                const lat = data.coord.lat;
+                const lon = data.coord.lon;
+                console.log(`Latitude: ${lat}, Longitude: ${lon}`); // Debugging step
+
+                const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
+                console.log(`Weather URL: ${weatherUrl}`); // Debugging step
+
+                return fetch(weatherUrl);
+            } else {
+                throw new Error('Coordinates not found for the specified city.');
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
             displayWeatherData(city, data);
         })
-        .catch(error => console.error('Error fetching weather data:', error));
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+        });
 }
 
 function displayWeatherData(city, data) {
