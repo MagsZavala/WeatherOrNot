@@ -24,12 +24,15 @@ Open the Weather Dashboard in your web browser.
 Enter the name of a city in the search bar and click the search button.
 View the current weather conditions and 5-day forecast for the city.
 Click on any city in the search history to view its weather data again.
-Technologies Used
+
+##Technologies Used
 HTML: Structure and content of the web pages.
 CSS: Styling and layout of the web pages.
 JavaScript: Dynamic functionality and interaction.
 OpenWeatherMap API: Retrieves weather data for cities.
 LocalStorage: Stores search history for persistent access.
-Mock-Up
+
+##Mock-Up
 The following image shows the web application's appearance and functionality:
+
 
