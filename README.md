@@ -34,5 +34,8 @@ LocalStorage: Stores search history for persistent access.
 
 ##Mock-Up
 The following image shows the web application's appearance and functionality:
+images/Screenshot 2024-07-18 at 9.21.35 PM.png
 
+git@github.com:MagsZavala/WeatherOrNot.git
+file:///Users/magoo/bootcamp/hw/WeatherOrNot/index.html
 
